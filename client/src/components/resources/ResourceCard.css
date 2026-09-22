@@ -1,0 +1,108 @@
+.resourceCover {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(15, 23, 42, 0.04);
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.resourceCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 220ms ease;
+}
+
+.resourceCard:hover .resourceCover img {
+  transform: scale(1.06);
+}
+
+.resourceCoverOverlay {
+  position: absolute;
+  inset: auto 10px 10px 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resourceCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.resourceCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(13, 148, 136, 0.35);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.resourceTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.resourceName {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.resourcePriceBlock {
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.resourcePrice {
+  font-weight: 750;
+}
+
+.resourceMeta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.resourceAmenities {
+  margin-top: 10px;
+  color: rgba(51, 65, 85, 0.72);
+  font-size: 13px;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.resourceActions {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resourceActions .btn {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  .resourceTop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resourcePriceBlock {
+    text-align: left;
+  }
+}

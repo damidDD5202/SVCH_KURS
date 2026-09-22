@@ -1,0 +1,17 @@
+.bookingModalActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .bookingModalActions {
+    flex-direction: column;
+  }
+
+  .bookingModalActions .btn {
+    width: 100%;
+  }
+}

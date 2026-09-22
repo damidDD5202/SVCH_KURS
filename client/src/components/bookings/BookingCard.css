@@ -1,0 +1,71 @@
+.bookingCardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.bookingCardTitle {
+  font-weight: 650;
+  margin: 0;
+}
+
+.bookingCardMeta {
+  margin-top: 10px;
+}
+
+.bookingCardMeta dt {
+  display: inline;
+  font-weight: 700;
+}
+
+.bookingCardMeta dd {
+  display: inline;
+}
+
+.bookingCardActions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bookingCardPast {
+  opacity: 0.72;
+  background: rgba(148, 163, 184, 0.12);
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+.bookingCardPast .bookingCardTitle {
+  color: rgba(51, 65, 85, 0.82);
+}
+
+.bookingCardCancelled {
+  opacity: 0.78;
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.bookingStatus {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bookingStatus--confirmed {
+  color: #0f766e;
+}
+
+.bookingStatus--completed {
+  color: #64748b;
+}
+
+.bookingStatus--cancelled {
+  color: #b45309;
+}
+
+.bookingModalActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}

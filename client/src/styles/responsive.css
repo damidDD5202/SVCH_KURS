@@ -1,0 +1,150 @@
+/* Global responsive fixes */
+
+.app {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.container {
+  min-width: 0;
+}
+
+/* Buttons in hero / actions */
+.homeActions .btn,
+.homeActions .btnSecondary {
+  flex: 1 1 auto;
+  min-width: min(100%, 200px);
+}
+
+@media (max-width: 479px) {
+  .homeActions {
+    flex-direction: column;
+  }
+
+  .homeActions .btn,
+  .homeActions .btnSecondary {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Auth forms */
+.authCard {
+  padding: clamp(16px, 4vw, 24px);
+}
+
+.authCard h2 {
+  font-size: clamp(20px, 5vw, 24px);
+  margin: 0 0 14px;
+}
+
+/* Page headers */
+.pageHeader h1 {
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* Prevent horizontal overflow from long content */
+.resourceName,
+.bookingCardTitle,
+.modalTitle {
+  overflow-wrap: anywhere;
+}
+
+/* Datetime inputs on iOS */
+.field input[type="datetime-local"],
+.field input[type="date"],
+.field input[type="time"] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Search on resources */
+.heroCard .searchBox {
+  flex: 1 1 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+/* Modal */
+@media (max-width: 520px) {
+  .modalHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .modalClose {
+    align-self: flex-end;
+  }
+
+  .modalTitle {
+    font-size: 17px;
+    padding-right: 0;
+  }
+}
+
+/* Tables — horizontal scroll with hint */
+.tableWrap {
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.dataTable {
+  min-width: 520px;
+}
+
+/* Bookings toolbar */
+.bookingsToolbar .btn {
+  flex: 1 1 auto;
+  min-width: 120px;
+}
+
+@media (max-width: 479px) {
+  .bookingsToolbar {
+    flex-direction: column;
+  }
+
+  .bookingsToolbar .btn {
+    width: 100%;
+  }
+}
+
+/* Subscription / reminder banners */
+.subscriptionBanner,
+.reminderBanner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscriptionBanner .btn,
+.reminderBanner .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .subscriptionBanner,
+  .reminderBanner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscriptionBanner .btn,
+  .reminderBanner .btn {
+    width: 100%;
+  }
+}
+
+/* Admin table on phone */
+@media (max-width: 639px) {
+  .dataTable th,
+  .dataTable td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}

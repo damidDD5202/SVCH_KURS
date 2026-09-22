@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  min-width: 0;
+  color: var(--color-text);
+  background: var(--app-gradient);
+  transition: background 240ms ease, color 240ms ease;
+}
+
+.app > .container {
+  flex: 1 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: clamp(16px, 4vw, 32px) var(--page-padding) clamp(40px, 8vw, 80px);
+}

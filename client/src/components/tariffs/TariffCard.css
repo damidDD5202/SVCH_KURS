@@ -1,0 +1,4 @@
+.tariffCardActive {
+  border-color: rgba(13, 148, 136, 0.45) !important;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}

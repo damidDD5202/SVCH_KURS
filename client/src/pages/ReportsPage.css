@@ -1,0 +1,21 @@
+.reportActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.reportActionsCard h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+@media (max-width: 639px) {
+  .reportActions {
+    flex-direction: column;
+  }
+
+  .reportActions .btn {
+    width: 100%;
+  }
+}

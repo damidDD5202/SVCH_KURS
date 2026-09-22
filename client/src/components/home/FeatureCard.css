@@ -1,0 +1,52 @@
+.featureCard {
+  position: relative;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(240, 253, 250, 0.5));
+  border-radius: 18px;
+  padding: 18px 18px 18px 20px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #14b8a6, #0d9488);
+}
+
+.featureCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(13, 148, 136, 0.22);
+  box-shadow: 0 16px 40px rgba(13, 148, 136, 0.10);
+}
+
+.featureIndex {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f766e;
+  background: rgba(13, 148, 136, 0.12);
+}
+
+.featureTitle {
+  margin: 0;
+  font-weight: 750;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+
+.featureCard .muted {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
